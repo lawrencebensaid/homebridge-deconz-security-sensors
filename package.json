@@ -1,0 +1,32 @@
+{
+  "name": "homebridge-deconz-security-sensors",
+  "displayName": "deCONZ Security Sensors",
+  "version": "0.1.0",
+  "description": "A Homebridge plugin to use deCONZ sensors and the homebridge-securitysystem plugin together",
+  "author": {
+    "name": "Lawrence Bensaid",
+    "email": "lawrencebensaid@icloud.com"
+  },
+  "homepage": "https://github.com/lawrencebensaid/homebridge-deconz-security-sensors#readme",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lawrencebensaid/homebridge-deconz-security-sensors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lawrencebensaid/homebridge-deconz-security-sensors/issues"
+  },
+  "engines": {
+    "homebridge": ">=0.2.0",
+    "node": ">=6.0.0"
+  },
+  "main": "index.js",
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "bundledDependencies": false,
+  "dependencies": {
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9",
+    "ws": "^8.1.0"
+  }
+}
