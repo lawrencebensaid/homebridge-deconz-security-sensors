@@ -1,4 +1,4 @@
-# homebridge-deconz-security-sensors
+# deCONZ Security Sensors
 
 A Homebridge plugin to use deCONZ sensors and the `homebridge-securitysystem` plugin together
 

@@ -1,0 +1,95 @@
+{
+    "pluginAlias": "deCONZ Security Sensors",
+    "pluginType": "platform",
+    "singular": true,
+    "headerDisplay": "A Homebridge plugin to use deCONZ sensors and the `homebridge-securitysystem` plugin together",
+    "footerDisplay": "This plugin is provided by [@lawrencebensaid](https://github.com/lawrencebensaid).\n\n* This plugin doesn't add any HomeKit accessories. It solely acts as a bridge between your deCONZ service and the homebridge-securitysystem Homebridge plugin.",
+    "schema": {
+        "type": "object",
+        "required": [
+            "target",
+            "deconz",
+            "sensors"
+        ],
+        "properties": {
+            "target": {
+                "title": "Where the homebridge-securitysystem plugin is installed",
+                "type": "object",
+                "required": [
+                    "host",
+                    "port",
+                    "code"
+                ],
+                "properties": {
+                    "host": {
+                        "title": "IP address (or hostname) of Security System server",
+                        "type": "string",
+                        "placeholder": "192.168.0.7"
+                    },
+                    "port": {
+                        "title": "Port of Security System server",
+                        "type": "integer",
+                        "placeholder": "8582"
+                    },
+                    "code": {
+                        "title": "Authentication pincode of Security System server",
+                        "type": "integer",
+                        "placeholder": "0123"
+                    }
+                }
+            },
+            "deconz": {
+                "title": "Where the deCONZ instance is running",
+                "type": "object",
+                "required": [
+                    "host",
+                    "port"
+                ],
+                "properties": {
+                    "host": {
+                        "title": "IP address (or hostname) of deCONZ rest-api",
+                        "type": "string",
+                        "placeholder": "192.168.0.7"
+                    },
+                    "port": {
+                        "title": "Port of deCONZ rest-api",
+                        "type": "integer",
+                        "placeholder": "443"
+                    }
+                }
+            },
+            "sensors": {
+                "title": "Should contain one or more of the following keys: home, away or night.",
+                "type": "object",
+                "properties": {
+                    "home": {
+                        "type": "array",
+                        "title": "IDs of the deCONZ sensors to trigger during home mode",
+                        "items": {
+                            "title": "Sensor ID",
+                            "type": "integer"
+                        }
+                    },
+                    "away": {
+                        "type": "array",
+                        "title": "IDs of the deCONZ sensors to trigger during away mode",
+                        "items": {
+                            "title": "Sensor ID",
+                            "type": "integer"
+                        }
+                    },
+                    "night": {
+                        "type": "array",
+                        "title": "IDs of the deCONZ sensors to trigger during night mode",
+                        "items": {
+                            "title": "Sensor ID",
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "form": null,
+    "display": null
+}
